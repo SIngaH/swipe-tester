@@ -1,5 +1,6 @@
 //swipe
-function swipe(){
+// function swipe(){
+  console.log("here")
     const swiper = document.querySelectorAll('.swiper');
     const swiperArray = Array.from(swiper);
     swiperArray.forEach(_C =>{
@@ -33,4 +34,4 @@ function swipe(){
     
       function unify(e) { return e.changedTouches ? e.changedTouches[0] : e };
     });
-  }
+  // }
