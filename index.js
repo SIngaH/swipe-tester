@@ -89,9 +89,6 @@ function unify(e){
   return e.changedTouches = e.changedTouches[0] : e
 }
 
-
-
-
 /*
 const swiper = document.querySelectorAll('.container');
 const swiperArray = Array.from(swiper);

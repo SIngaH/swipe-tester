@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        #wrapper{
+            max-width:320px;
+            margin:0 auto;
+            background-color:cornflowerblue;
+        }
+        header{
+            background-color: crimson;
+            padding:5%;
+            font-size: 17px;
+        }
+        .container{
+            display:flex;
+            align-items: center;
+            width:100%;
+            overflow-y:hidden;
+            height:15vw;
+            max-height:100vh;
+             --n: 1;
+             width:calc(var(--n)*100%);
+            transform: translate(calc(var(--i, 0)/var(--n)*-100% + var(--tx, 0px)));
+            transition: transform .5s ease-out;
+        }
+        img{
+            min-width: 100%;
+            width:100%;
+            width: calc(100%/var(--n));
+            pointer-events: none;
+        }
+        .smooth{
+            transition: transform calc(var(--f, 1)*.5s) ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <img src="images/swipe-img1.jpg" alt="swipe image">
+            <img src="images/swipe-img2.jpg" alt="swipe image">
+            <img src="images/swipe-img3.jpg" alt="swipe image">
+            <img src="images/swipe-img4.jpg" alt="swipe image">
+        </div>
+        <div class="container">
+            <img src="images/swipe-img1.jpg" alt="swipe image">
+            <img src="images/swipe-img2.jpg" alt="swipe image">
+            <img src="images/swipe-img3.jpg" alt="swipe image">
+            <img src="images/swipe-img4.jpg" alt="swipe image">
+        </div>
+        <div class="container">
+            <img src="images/swipe-img1.jpg" alt="swipe image">
+            <img src="images/swipe-img2.jpg" alt="swipe image">
+            <img src="images/swipe-img3.jpg" alt="swipe image">
+            <img src="images/swipe-img4.jpg" alt="swipe image">
+        </div>
+        <div class="container">
+            <img src="images/swipe-img1.jpg" alt="swipe image">
+            <img src="images/swipe-img2.jpg" alt="swipe image">
+            <img src="images/swipe-img3.jpg" alt="swipe image">
+            <img src="images/swipe-img4.jpg" alt="swipe image">
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
