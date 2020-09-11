@@ -31,7 +31,6 @@
             max-height:100vh;
              --n: 1;
              width:calc(var(--n)*100%);
-            /* transform: translate(calc(var(--i, 0)/var(--n)*-100%)); */
             transform: translate(calc(var(--i, 0)/var(--n)*-100% + var(--tx, 0px)));
             transition: transform .5s ease-out;
         }
@@ -42,25 +41,8 @@
             pointer-events: none;
         }
         .smooth{
-            /* transition:transform .5s ease-out; */
             transition: transform calc(var(--f, 1)*.5s) ease-out;
         }
-        /*
-        p, .pink, .blue{
-            width: calc(100%/var(--n));
-        }
-        p{
-            padding: 5%;
-            width:100%;
-        }
-        .pink{
-            width:100%;
-            background-color:palevioletred;
-        }
-        .blue{
-            width:100%;
-            background-color:blue;
-        }*/
     </style>
 </head>
 <body>
@@ -79,8 +61,3 @@
     <script src="https://kit.fontawesome.com/2677b557d6.js"></script>
 </body>
 </html>
-<!-- <div class="swiper">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla tenetur odit corporis alias dolor excepturi libero iste at fugit. Modi dolore corrupti sed aliquam ipsum ducimus mollitia similique quasi illum.</p>
-    <div class="pink"></div>
-    <div class="blue"></div>
-</div> -->

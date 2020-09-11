@@ -30,8 +30,6 @@ function move(e){
     let dx = unify(e).clientX - x0, s = Math.sign(dx);
     f = +(s*dx/w).toFixed(2);
 
-    // if(x0 || x0 === 0){
-    //   let dx = unify(e).clientX - x0, s = Math.sign(dx);
       if((i > 0 || s < 0) && (i < N - 1 || s > 0) && f > .2)
       _C.style.setProperty("--i", i -= s);
     }
@@ -41,7 +39,6 @@ function move(e){
       f = 1 - f
 
       x0 = null
-    // }
 };
 
 size();
