@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swipe</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #wrapper{
+            max-width:320px;
+            margin:0 auto;
+            background-color:cornflowerblue;
+            overflow: hidden;
+        }
+        header{
+            background-color: crimson;
+            padding:5%;
+        }
+        .swiper{
+            display:flex;
+            justify-content: space-around;
+            width:500px;
+            transform: translate(calc(var(--i, 0)/var(--n)*-115%));
+            transition: transform .5s ease-out;
+        }
+        p{
+            padding: 5%;
+            width:40%;
+        }
+        .pink{
+            width:30%;
+            background-color:palevioletred;
+        }
+        .blue{
+            width:30%;
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>This shall swipe <i class="fas fa-arrow-down"></i></h1>
+        </header>
+        <div class="swiper">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla tenetur odit corporis alias dolor excepturi libero iste at fugit. Modi dolore corrupti sed aliquam ipsum ducimus mollitia similique quasi illum.</p>
+            <div class="pink"></div>
+            <div class="blue"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/2677b557d6.js"></script>
+</body>
+</html>
