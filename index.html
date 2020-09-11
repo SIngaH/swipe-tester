@@ -9,35 +9,57 @@
             margin:0;
             padding:0;
         }
+        body{
+            overflow-x: hidden;
+        }
         #wrapper{
             max-width:320px;
             margin:0 auto;
             background-color:cornflowerblue;
-            overflow: hidden;
         }
         header{
             background-color: crimson;
             padding:5%;
         }
-        .swiper{
+        .container{
             display:flex;
-            justify-content: space-around;
-            width:500px;
-            transform: translate(calc(var(--i, 0)/var(--n)*-115%));
+            align-items: center;
+            width:100%;
+            overflow-y:hidden;
+            height:50vw;
+            max-height:100vh;
+             --n: 1;
+             width:calc(var(--n)*100%);
+            /* transform: translate(calc(var(--i, 0)/var(--n)*-100%)); */
+            transform: translate(calc(var(--i, 0)/var(--n)*-100% + var(--tx, 0px)));
             transition: transform .5s ease-out;
+        }
+        img{
+            min-width: 100%;
+            width:100%;
+            width: calc(100%/var(--n));
+            pointer-events: none;
+        }
+        .smooth{
+            /* transition:transform .5s ease-out; */
+            transition: transform calc(var(--f, 1)*.5s) ease-out;
+        }
+        /*
+        p, .pink, .blue{
+            width: calc(100%/var(--n));
         }
         p{
             padding: 5%;
-            width:40%;
+            width:100%;
         }
         .pink{
-            width:30%;
+            width:100%;
             background-color:palevioletred;
         }
         .blue{
-            width:30%;
+            width:100%;
             background-color:blue;
-        }
+        }*/
     </style>
 </head>
 <body>
@@ -45,13 +67,19 @@
         <header>
             <h1>This shall swipe <i class="fas fa-arrow-down"></i></h1>
         </header>
-        <div class="swiper">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla tenetur odit corporis alias dolor excepturi libero iste at fugit. Modi dolore corrupti sed aliquam ipsum ducimus mollitia similique quasi illum.</p>
-            <div class="pink"></div>
-            <div class="blue"></div>
+        <div class="container">
+            <img src="images/swipe-img1.jpg" alt="b1">
+            <img src="images/swipe-img2.jpg" alt="b1">
+            <img src="images/swipe-img3.jpg" alt="b1">
+            <img src="images/swipe-img4.jpg" alt="b1">
         </div>
     </div>
     <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/2677b557d6.js"></script>
 </body>
 </html>
+<!-- <div class="swiper">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla tenetur odit corporis alias dolor excepturi libero iste at fugit. Modi dolore corrupti sed aliquam ipsum ducimus mollitia similique quasi illum.</p>
+    <div class="pink"></div>
+    <div class="blue"></div>
+</div> -->
